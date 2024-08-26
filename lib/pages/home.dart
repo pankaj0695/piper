@@ -100,7 +100,7 @@ class HomePage extends StatelessWidget {
                           Expanded(
                             flex: 1,
                             child: SizedBox(
-                              height: 600, // Ensure a specific height is given
+                              height: 700, // Ensure a specific height is given
                               child: Image.asset(
                                 'assets/images/rower-image.png',
                                 fit: BoxFit.contain,

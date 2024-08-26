@@ -46,7 +46,7 @@ class ReportPage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   const Text(
-                                    'Camera Feed',
+                                    'Pipe Analysis',
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 16,
@@ -55,8 +55,8 @@ class ReportPage extends StatelessWidget {
                                   const SizedBox(height: 10),
                                   Center(
                                     child: Image.asset(
-                                      'assets/images/pipe-image.jpg',
-                                      width: 750,
+                                      'assets/images/pipe-analysis.png',
+                                      width: 1000,
                                     ),
                                   ),
                                 ],
