@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:piper/constants/colors.dart';
 
-class HomePage extends StatelessWidget {
+class HomeDesktopPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,10 +100,9 @@ class HomePage extends StatelessWidget {
                           Expanded(
                             flex: 1,
                             child: SizedBox(
-                              height: 700, // Ensure a specific height is given
                               child: Image.asset(
-                                'assets/images/rower-image.png',
-                                fit: BoxFit.contain,
+                                'assets/images/rower-new.png',
+                                fit: BoxFit.fitHeight,
                               ),
                             ),
                           ),

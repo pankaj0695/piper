@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:piper/constants/colors.dart';
 
-class ReportPage extends StatelessWidget {
+class ReportDesktopPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,8 +55,8 @@ class ReportPage extends StatelessWidget {
                                   const SizedBox(height: 10),
                                   Center(
                                     child: Image.asset(
-                                      'assets/images/pipe-analysis.png',
-                                      width: 1000,
+                                      'assets/images/corrosion-analysis.png',
+                                      width: 520,
                                     ),
                                   ),
                                 ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:piper/constants/colors.dart';
 
-class SettingsPage extends StatelessWidget {
+class SettingsDesktopPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

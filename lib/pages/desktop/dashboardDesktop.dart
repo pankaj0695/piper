@@ -3,12 +3,12 @@ import 'package:piper/constants/colors.dart';
 import 'package:video_player/video_player.dart';
 import 'dart:async';
 
-class DashboardPage extends StatefulWidget {
+class DashboardDesktopPage extends StatefulWidget {
   @override
-  _DashboardPageState createState() => _DashboardPageState();
+  _DashboardDesktopPageState createState() => _DashboardDesktopPageState();
 }
 
-class _DashboardPageState extends State<DashboardPage> {
+class _DashboardDesktopPageState extends State<DashboardDesktopPage> {
   late Timer _timer;
   Duration _elapsed = Duration.zero;
   late VideoPlayerController _videoPlayerController;
