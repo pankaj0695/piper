@@ -68,27 +68,32 @@ class _MobileLayoutState extends State<MobileLayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: CustomColor.darkBlue1,
-        title: Row(
+        backgroundColor: const Color.fromRGBO(0, 56, 105, 0.4),
+        title: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 30, 0, 18),
-              child: Image.asset(
-                'assets/images/piper-logo.png', // Path to your logo image
-                height: 45, // Adjust the height as needed
-              ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 30, 0, 18),
+                  child: Image.asset(
+                    'assets/images/piper-logo.png', // Path to your logo image
+                    height: 45, // Adjust the height as needed
+                  ),
+                ),
+                const SizedBox(width: 10), // Spacing between the logo and title
+                const Padding(
+                  padding: EdgeInsets.fromLTRB(0, 30, 0, 18),
+                  child: Text(
+                    'Piper',
+                    style: TextStyle(
+                        color: CustomColor.lightBlue1,
+                        fontFamily: 'Poppins',
+                        fontSize: 28),
+                  ),
+                ), // The title of your app
+              ],
             ),
-            const SizedBox(width: 10), // Spacing between the logo and title
-            const Padding(
-              padding: EdgeInsets.fromLTRB(0, 30, 0, 18),
-              child: Text(
-                'Piper',
-                style: TextStyle(
-                    color: CustomColor.lightBlue1,
-                    fontFamily: 'Poppins',
-                    fontSize: 28),
-              ),
-            ), // The title of your app
+            const SizedBox(height: 20),
           ],
         ),
       ),
@@ -141,7 +146,7 @@ class _MobileLayoutState extends State<MobileLayout> {
           unselectedItemColor: CustomColor.lightgrey,
           selectedFontSize: 13,
           unselectedFontSize: 13,
-          backgroundColor: CustomColor.darkBlue1,
+          backgroundColor: CustomColor.darkBlue2,
           showSelectedLabels: true,
           showUnselectedLabels: true,
           type: BottomNavigationBarType.fixed),
