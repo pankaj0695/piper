@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   go_router: ^14.2.7
   video_player: ^2.9.1
+  flutter_launcher_icons: ^0.14.1
 
 dev_dependencies:
   flutter_test:
@@ -91,5 +92,12 @@ flutter:
         - asset: fonts/Inika-Regular.ttf
           weight: 400
   #
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/piper-icon.png"
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
