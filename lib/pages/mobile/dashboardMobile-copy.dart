@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:piper/constants/colors.dart';
+import 'package:video_player/video_player.dart';
 import 'dart:async';
-import 'dart:typed_data';
-import 'package:web_socket_channel/web_socket_channel.dart';
 
 class DashboardMobilePage extends StatefulWidget {
   @override
@@ -12,21 +11,24 @@ class DashboardMobilePage extends StatefulWidget {
 class _DashboardMobilePageState extends State<DashboardMobilePage> {
   late Timer _timer;
   Duration _elapsed = Duration.zero;
-  late WebSocketChannel _channel;
-  Uint8List? _frameData;
+  late VideoPlayerController _videoPlayerController;
 
   @override
   void initState() {
     super.initState();
     _startTimer();
 
-    _channel = WebSocketChannel.connect(Uri.parse(
-        'ws://192.168.1.142:8765')); // Replace with your Local IP address
-    _channel.stream.listen((data) {
-      setState(() {
-        _frameData = data;
+    // Initialize the video player controller
+    _videoPlayerController = VideoPlayerController.asset(
+      'assets/videos/pipe-video.mp4', // Replace with your video file path
+    )
+      ..setVolume(0.0)
+      ..setLooping(true)
+      ..initialize().then((_) {
+        setState(
+            () {}); // Ensure the first frame is shown after the video is initialized
+        _videoPlayerController.play(); // Play the video automatically
       });
-    });
   }
 
   void _startTimer() {
@@ -40,7 +42,7 @@ class _DashboardMobilePageState extends State<DashboardMobilePage> {
   @override
   void dispose() {
     _timer.cancel();
-    _channel.sink.close();
+    _videoPlayerController.dispose(); // Dispose the video player controller
     super.dispose();
   }
 
@@ -88,10 +90,11 @@ class _DashboardMobilePageState extends State<DashboardMobilePage> {
                   SizedBox(
                       height: 260,
                       child: Center(
-                        child: _frameData != null
-                            ? Image.memory(
-                                _frameData!,
-                                fit: BoxFit.contain,
+                        child: _videoPlayerController.value.isInitialized
+                            ? AspectRatio(
+                                aspectRatio:
+                                    _videoPlayerController.value.aspectRatio,
+                                child: VideoPlayer(_videoPlayerController),
                               )
                             : const CircularProgressIndicator(),
                       )),

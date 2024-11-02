@@ -18,8 +18,9 @@ class _DashboardDesktopPageState extends State<DashboardDesktopPage> {
   @override
   void initState() {
     super.initState();
+    _startTimer();
 
-    _channel = WebSocketChannel.connect(Uri.parse('ws://127.0.0.1:9001'));
+    _channel = WebSocketChannel.connect(Uri.parse('ws://192.168.1.142:8765'));
     _channel.stream.listen((data) {
       setState(() {
         _frameData = data;
