@@ -112,9 +112,9 @@ class _DashboardDesktopPageState extends State<DashboardDesktopPage> {
                                                 fontSize: 22,
                                               ),
                                             ),
-                                            const SizedBox(height: 10),
-                                            SizedBox(
-                                                height: 480,
+                                            // const SizedBox(height: 10),
+                                            Expanded(
+                                                flex: 1,
                                                 child: Center(
                                                   child: _frameData != null
                                                       ? Image.memory(

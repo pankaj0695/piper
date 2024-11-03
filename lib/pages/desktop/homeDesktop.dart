@@ -26,7 +26,7 @@ class HomeDesktopPage extends StatelessWidget {
                       topLeft: Radius.circular(28)),
                 ),
                 padding: const EdgeInsets.symmetric(
-                    horizontal: 40.0, vertical: 80.0),
+                    horizontal: 40.0, vertical: 50.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -120,7 +120,7 @@ class HomeDesktopPage extends StatelessWidget {
       required String title,
       required String description}) {
     return Container(
-      constraints: const BoxConstraints(minHeight: 150), // Added constraints
+      // constraints: const BoxConstraints(maxHeight: 180), // Added constraints
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
         color: CustomColor.darkBlue3,
@@ -130,23 +130,23 @@ class HomeDesktopPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(icon, size: 50, color: CustomColor.lightBlue1),
-          const SizedBox(height: 10),
+          Icon(icon, size: 40, color: CustomColor.lightBlue1),
+          // const SizedBox(height:10),
           Text(
             title,
             style: const TextStyle(
               color: Colors.white,
-              fontSize: 20,
+              fontSize: 16,
               fontWeight: FontWeight.bold,
             ),
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           Text(
             description,
             style: const TextStyle(
               color: Colors.white70,
-              fontSize: 14,
+              fontSize: 12.5,
             ),
             textAlign: TextAlign.center,
           ),

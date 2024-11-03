@@ -116,8 +116,8 @@ class _DashboardDesktopPageState extends State<DashboardDesktopPage> {
                                               ),
                                             ),
                                             const SizedBox(height: 10),
-                                            SizedBox(
-                                                height: 480,
+                                            Expanded(
+                                                flex: 1,
                                                 child: Center(
                                                   child: _videoPlayerController
                                                           .value.isInitialized
