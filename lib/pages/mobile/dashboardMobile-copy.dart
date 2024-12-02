@@ -261,6 +261,7 @@ class _DashboardMobilePageState extends State<DashboardMobilePage> {
                   ],
                 ),
               )),
+          const SizedBox(height: 16),
         ]),
       ),
     );

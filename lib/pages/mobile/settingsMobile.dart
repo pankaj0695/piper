@@ -30,11 +30,11 @@ class SettingsMobilePage extends StatelessWidget {
                       child: Icon(Icons.person, color: CustomColor.darkBlue1),
                     ),
                     title: Text(
-                      'User Name',
+                      'NanoNinjas',
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
                     subtitle: Text(
-                      'user.email@example.com',
+                      'nanoninjas@gmail.com',
                       style: TextStyle(color: Colors.white70, fontSize: 14),
                     ),
                   ),
